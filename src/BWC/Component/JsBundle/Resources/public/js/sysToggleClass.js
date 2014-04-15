@@ -37,7 +37,7 @@ $(function() {
             $children.removeClass(sysToggleClassData.class);
         }
 
-        if (hasClass) {
+        if (hasClass && $target.data('removeClass')) {
             $target.removeClass(sysToggleClassData.class);
         } else {
             $target.addClass(sysToggleClassData.class);
