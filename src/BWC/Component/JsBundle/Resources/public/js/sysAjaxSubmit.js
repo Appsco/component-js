@@ -52,19 +52,22 @@ $(function() {
                     trigger: $dom,
                     target: $target,
                     form: jqForm,
-                    originalEvent: ee
+                    originalEvent: ee,
+                    XHR: jqXHR
                 });
                 jqForm.trigger('loaded.bwc.sys.submit.ajax', {
                     trigger: $dom,
                     target: $target,
                     form: jqForm,
-                    originalEvent: ee
+                    originalEvent: ee,
+                    XHR: jqXHR
                 });
                 BWC.Dispatcher.dispatch('sys.submit.ajax.success', {
                     dom: $dom.dom,
                     target: $target,
                     form: $form,
-                    originalEvent: ee
+                    originalEvent: ee,
+                    XHR: jqXHR
                 });
             }
             if (!sysSubmitData.dontBlock && typeof($target.block) == "function") {
